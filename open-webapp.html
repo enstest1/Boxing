@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rumble Boxing Combo Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1e40af;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .link-card {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f8f9fa;
+        }
+        .link-card h3 {
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #1e40af;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rumble Boxing Combo Generator</h1>
+        <p>Choose one of the following options to access the application:</p>
+        
+        <div class="links">
+            <div class="link-card">
+                <h3>Web App</h3>
+                <p>Access the web interface directly:</p>
+                <a href="http://localhost:3000" class="btn" target="_blank">localhost:3000</a>
+                <a href="http://172.20.42.240:3000" class="btn" target="_blank">172.20.42.240:3000</a>
+                <a href="http://10.88.0.1:3000" class="btn" target="_blank">10.88.0.1:3000</a>
+            </div>
+            
+            <div class="link-card">
+                <h3>API Health Check</h3>
+                <p>Verify if the API is running:</p>
+                <a href="http://localhost:3001/health" class="btn" target="_blank">localhost:3001/health</a>
+                <a href="http://172.20.42.240:3001/health" class="btn" target="_blank">172.20.42.240:3001/health</a>
+                <a href="http://10.88.0.1:3001/health" class="btn" target="_blank">10.88.0.1:3001/health</a>
+            </div>
+        </div>
+        
+        <div class="link-card">
+            <h3>Instructions:</h3>
+            <p>1. Make sure both the API and web app are running using <code>pnpm dev</code> in the project directory.</p>
+            <p>2. Try each of the links above until you find one that works.</p>
+            <p>3. If none work, there might be a network issue between your WSL environment and Windows.</p>
+        </div>
+    </div>
+</body>
+</html>

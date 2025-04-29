@@ -1,0 +1,38 @@
+{
+  "name": "boxing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"TS_NODE_TRANSPILE_ONLY=true pnpm --filter api dev\" \"pnpm --filter web dev\"",
+    "dev:api": "TS_NODE_TRANSPILE_ONLY=true pnpm --filter api exec ts-node apps/api/src/index.ts",
+    "dev:web": "pnpm --filter web --stream run dev",
+    "build": "pnpm -r run build",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts,.tsx",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.25.1",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  },
+  "dependencies": {
+    "@types/node": "22.15.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "zod": "^3.24.3"
+  }
+}
